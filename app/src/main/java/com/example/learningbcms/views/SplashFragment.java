@@ -1,60 +1,75 @@
 package com.example.learningbcms.views;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-
-import android.os.Handler;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.learningbcms.R;
 import com.example.learningbcms.viewmodel.AuthViewModel;
 
-
 public class SplashFragment extends Fragment {
 
-
-    private AuthViewModel viewModel;
     private NavController navController;
+    private static final String PREFS_NAME = "MyPrefsFile";
+    private static final String BUTTON_CLICKED_KEY = "start_button_clicked";
+    private AuthViewModel viewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_splash, container, false);
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable  Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        viewModel = new ViewModelProvider(this , ViewModelProvider.AndroidViewModelFactory
-                .getInstance(getActivity().getApplication())).get(AuthViewModel.class);
-        navController = Navigation.findNavController(view);
-    }
+        NavHostFragment navHostFragment = (NavHostFragment) requireActivity()
+                .getSupportFragmentManager()
+                .findFragmentById(R.id.nav_host_fragment);
+        if (navHostFragment != null) {
+            navController = navHostFragment.getNavController();
+        }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        viewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory
+                .getInstance(requireActivity().getApplication())).get(AuthViewModel.class);
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        view.findViewById(R.id.startButton).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                if (viewModel.getCurrentUser() != null){
+            public void onClick(View v) {
+                if (viewModel.getCurrentUser() != null) {
                     navController.navigate(R.id.action_splashFragment_to_listFragment);
-                }else{
+                } else {
                     navController.navigate(R.id.action_splashFragment_to_signInFragment);
                 }
-            }
-        }, 4000);
 
+                saveStartButtonClickedStatus(true);
+            }
+        });
+
+        if (!isStartButtonClicked()) {
+            navController.navigate(R.id.action_splashFragment_to_listFragment);
+        }
+    }
+
+    private void saveStartButtonClickedStatus(boolean isClicked) {
+        SharedPreferences.Editor editor = requireActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE).edit();
+        editor.putBoolean(BUTTON_CLICKED_KEY, isClicked);
+        editor.apply();
+    }
+
+    private boolean isStartButtonClicked() {
+        SharedPreferences sharedPreferences = requireActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getBoolean(BUTTON_CLICKED_KEY, false);
     }
 }
