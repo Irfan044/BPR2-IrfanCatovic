@@ -31,6 +31,7 @@ public class SignUpFragment extends Fragment {
     private EditText editEmail , editPass;
     private TextView signInText;
     private Button signUpBtn;
+    private Button signInBtn;
 
 
     @Override
@@ -45,12 +46,12 @@ public class SignUpFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         navController = Navigation.findNavController(view);
-        editEmail = view.findViewById(R.id.editEmailSignUp);
-        editPass = view.findViewById(R.id.editPassSignUp);
-        signInText = view.findViewById(R.id.signInText);
-        signUpBtn = view.findViewById(R.id.signUpBtn);
+        editEmail = view.findViewById(R.id.emailEditSignUP);
+        editPass = view.findViewById(R.id.passEditSignUp);
+        //signInText = view.findViewById(R.id.signInText);
+        signInBtn = view.findViewById(R.id.signInBtn);
 
-        signInText.setOnClickListener(new View.OnClickListener() {
+        signInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_signUpFragment_to_signInFragment);
