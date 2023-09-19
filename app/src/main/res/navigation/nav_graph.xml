@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_signUpFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_previousKnowledgeFragment"
+            app:destination="@id/previousKnowledgeFragment" />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
@@ -96,4 +99,9 @@
             app:argType="string"
             android:defaultValue="null" />
     </fragment>
+    <fragment
+        android:id="@+id/previousKnowledgeFragment"
+        android:name="com.example.learningbcms.views.PreviousKnowledgeFragment"
+        android:label="fragment_previous_knowledge"
+        tools:layout="@layout/fragment_previous_knowledge" />
 </navigation>

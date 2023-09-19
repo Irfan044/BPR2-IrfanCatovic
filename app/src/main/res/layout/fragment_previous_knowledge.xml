@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#3F48CC"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DO YOU KNOW ANY BCMS ALREADY?"
+        android:textSize="18sp"
+        android:textColor="#FF7F27"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:text="You can only select one"
+            android:textColor="#FF7F27"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF7F27"
+            android:textColor="#3F48CC"
+            android:text="Yes, quite a lot" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF7F27"
+            android:textColor="#3F48CC"
+            android:text="Yes, a few words" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF7F27"
+            android:textColor="#3F48CC"
+            android:text="No, I'm a beginner" />
+    </LinearLayout>
+
+</LinearLayout>
