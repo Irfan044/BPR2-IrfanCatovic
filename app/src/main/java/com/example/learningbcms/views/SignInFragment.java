@@ -67,8 +67,11 @@ public class SignInFragment extends Fragment {
                     viewModel.getFirebaseUserMutableLiveData().observe(getViewLifecycleOwner(), new Observer<FirebaseUser>() {
                         @Override
                         public void onChanged(FirebaseUser firebaseUser) {
-                            if (firebaseUser !=null){
-                                navController.navigate(R.id.action_signInFragment_to_listFragment);
+                            boolean isNewUser = firebaseUser.getMetadata() != null && firebaseUser.getMetadata().getCreationTimestamp() == firebaseUser.getMetadata().getLastSignInTimestamp();
+                            if (isNewUser) {
+                                navController.navigate(R.id.action_signUpFragment_to_previousKnowledgeFragment);
+                            } else {
+                                navController.navigate(R.id.action_signUpFragment_to_signInFragment);
                             }
                         }
                     });

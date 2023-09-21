@@ -19,7 +19,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.example.learningbcms.R;
 import com.example.learningbcms.viewmodel.AuthViewModel;
 import com.google.firebase.auth.FirebaseUser;
@@ -28,11 +27,9 @@ public class SignUpFragment extends Fragment {
 
     private AuthViewModel viewModel;
     private NavController navController;
-    private EditText editEmail , editPass;
-    private TextView signInText;
-    private Button signUpBtn;
+    private EditText editEmail, editPass;
     private Button signInBtn;
-
+    private Button signUpBtn;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,8 +45,8 @@ public class SignUpFragment extends Fragment {
         navController = Navigation.findNavController(view);
         editEmail = view.findViewById(R.id.emailEditSignUP);
         editPass = view.findViewById(R.id.passEditSignUp);
-        //signInText = view.findViewById(R.id.signInText);
         signInBtn = view.findViewById(R.id.signInBtn);
+        signUpBtn = view.findViewById(R.id.signUpBtn);
 
         signInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,19 +60,19 @@ public class SignUpFragment extends Fragment {
             public void onClick(View v) {
                 String email = editEmail.getText().toString();
                 String pass = editPass.getText().toString();
-                if (!email.isEmpty() && !pass.isEmpty()){
-                    viewModel.signUp(email , pass);
-                    Toast.makeText(getContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
-                    viewModel.getFirebaseUserMutableLiveData().observe(getViewLifecycleOwner(), new Observer<FirebaseUser>() {
-                        @Override
-                        public void onChanged(FirebaseUser firebaseUser) {
-                            if (firebaseUser !=null){
-                                navController.navigate(R.id.action_signUpFragment_to_signInFragment);
-                            }
-                        }
-                    });
-                }else{
+                if (!email.isEmpty() && !pass.isEmpty()) {
+                    viewModel.signUp(email, pass);
+                } else {
                     Toast.makeText(getContext(), "Please Enter Email and Pass", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        viewModel.getFirebaseUserMutableLiveData().observe(getViewLifecycleOwner(), new Observer<FirebaseUser>() {
+            @Override
+            public void onChanged(FirebaseUser firebaseUser) {
+                if (firebaseUser !=null){
+                    navController.navigate(R.id.action_signUpFragment_to_signInFragment);
                 }
             }
         });
@@ -85,9 +82,7 @@ public class SignUpFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        viewModel = new ViewModelProvider(this , ViewModelProvider.AndroidViewModelFactory
+        viewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory
                 .getInstance(getActivity().getApplication())).get(AuthViewModel.class);
-
     }
-
 }
