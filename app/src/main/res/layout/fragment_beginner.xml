@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/bkgBeginner"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewBCMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="BCMS BASICS"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="#FF7F27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textViewLesson1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lesson 1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FF7F27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBCMS" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLesson1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginEnd="120dp"
+            android:textStyle="bold"
+            android:text="Presenting Yourself"
+            android:textColor="#FF7F27"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewDennis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-64dp"
+            android:text="Hello, my name is Dennis!"
+            android:textColor="#FF7F27"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:text="Zdravo, ja se zovem Denis!"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:layout_marginTop="14dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:contentDescription="Speaker Button"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/baseline_speaker" />
+
+        <TextView
+            android:id="@+id/textViewYourName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-80dp"
+            android:text="What's your name?"
+            android:textColor="#FF7F27"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Kako se (ti) zoveš?"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="Speaker Button"
+            android:src="@drawable/baseline_speaker" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewMoreInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Want to know more about presenting yourself?"
+        android:textColor="#FF7F27"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutContent" />
+
+    <Button
+        android:id="@+id/buttonWatchVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Watch this video"
+        android:textColor="#3F48CC"
+        android:backgroundTint="#FF7F27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMoreInfo" />
+
+    <Button
+        android:id="@+id/buttonContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textColor="#3F48CC"
+        android:backgroundTint="#FF7F27"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonWatchVideo"
+        app:layout_constraintVertical_bias="0.644" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
