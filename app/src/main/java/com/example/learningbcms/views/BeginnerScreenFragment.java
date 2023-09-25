@@ -34,7 +34,7 @@ public class BeginnerScreenFragment extends Fragment {
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.action_resultFragment_to_listFragment); //might be changed, linking somewhere else
+                navController.navigate(R.id.action_beginnerScreen_to_listFragment); //might be changed, linking somewhere else
             }
         });
 
