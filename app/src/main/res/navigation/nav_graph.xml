@@ -103,5 +103,17 @@
         android:id="@+id/previousKnowledgeFragment"
         android:name="com.example.learningbcms.views.PreviousKnowledgeFragment"
         android:label="fragment_previous_knowledge"
-        tools:layout="@layout/fragment_previous_knowledge" />
+        tools:layout="@layout/fragment_previous_knowledge" >
+        <action
+            android:id="@+id/action_previousKnowledgeFragment_to_beginnerFragment"
+            app:destination="@id/beginnerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/beginnerFragment"
+        android:name="com.example.learningbcms.views.BeginnerFragment"
+        android:label="BeginnerFragment" >
+        <action
+            android:id="@+id/action_beginnerFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
 </navigation>
