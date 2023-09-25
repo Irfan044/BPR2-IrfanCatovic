@@ -1,21 +1,21 @@
 package com.example.learningbcms.views;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import android.media.MediaPlayer;
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import com.example.learningbcms.R;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 
-public class BeginnerFragment extends Fragment {
+import com.example.learningbcms.R;
+
+public class BeginnerScreenFragment extends Fragment {
 
     private NavController navController;
     private Button continueButton;
@@ -27,7 +27,7 @@ public class BeginnerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_beginner, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_beginner_screen, container, false);
         navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
 
         continueButton = rootView.findViewById(R.id.buttonContinue);
