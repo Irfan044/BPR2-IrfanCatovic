@@ -8,12 +8,14 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
 
 import com.example.learningbcms.R;
 import com.example.learningbcms.viewmodel.AuthViewModel;
 
 public class SettingsFragment extends Fragment {
 
+    private NavController navController;
     private AuthViewModel authViewModel;
 
     @Override
@@ -29,6 +31,7 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 authViewModel.signOut();
+                navController.navigate(R.id.action_settingsFragment_to_splashFragment);
             }
         });
 
