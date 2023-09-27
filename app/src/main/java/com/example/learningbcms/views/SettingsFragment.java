@@ -1,6 +1,7 @@
 package com.example.learningbcms.views;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +31,9 @@ public class SettingsFragment extends Fragment {
         signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d("MyApp", "Sign out button clicked");
                 authViewModel.signOut();
+                Log.d("MyApp", "Sign out completed, navigating to splashFragment");
                 navController.navigate(R.id.action_settingsFragment_to_splashFragment);
             }
         });

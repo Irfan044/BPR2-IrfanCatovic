@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_splashFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_beginnerScreen"
+            app:destination="@id/beginnerScreen" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -38,11 +41,17 @@
         android:label="SignInFragment"
         tools:layout="@layout/fragment_sign_in">
         <action
+            android:id="@+id/action_signInFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_previousKnowledgeFragment"
+            app:destination="@id/previousKnowledgeFragment" />
+        <action
             android:id="@+id/action_signInFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
         <action
-            android:id="@+id/action_signInFragment_to_listFragment"
-            app:destination="@id/listFragment" />
+            android:id="@+id/action_signInFragment_to_beginnerScreen"
+            app:destination="@id/beginnerScreen" />
     </fragment>
     <fragment
         android:id="@+id/listFragment"

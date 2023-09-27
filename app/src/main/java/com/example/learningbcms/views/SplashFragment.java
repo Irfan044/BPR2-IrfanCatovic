@@ -54,7 +54,7 @@ public class SplashFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (viewModel.getCurrentUser() != null) {
-                    navController.navigate(R.id.action_splashFragment_to_listFragment);
+                    navController.navigate(R.id.action_splashFragment_to_beginnerScreen); //change back to listFragment
                 } else {
                     navController.navigate(R.id.action_splashFragment_to_signInFragment);
                 }
