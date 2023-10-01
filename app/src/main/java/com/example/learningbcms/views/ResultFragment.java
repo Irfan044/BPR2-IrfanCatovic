@@ -1,5 +1,6 @@
 package com.example.learningbcms.views;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -92,10 +93,19 @@ public class ResultFragment extends Fragment {
                 notAnswered.setText(noAnswer.toString());
 
                 Long total = correct + wrong + noAnswer;
-                Long percent = (correct*100)/total;
-
+                Long percent = (correct * 100) / total;
                 percentTv.setText(String.valueOf(percent));
                 scoreProgressbar.setProgress(percent.intValue());
+
+                if (percent >= 0 && percent <= 33) {
+                    percentTv.setTextColor(Color.RED);
+                } else if (percent >= 34 && percent <= 67) {
+                    percentTv.setTextColor(Color.YELLOW);
+                } else if (percent >= 68 && percent <= 90) {
+                    percentTv.setTextColor(Color.GREEN);
+                } else if (percent >= 91 && percent <= 100) {
+                    percentTv.setTextColor(Color.parseColor("#FFD700"));
+                }
 
             }
         });

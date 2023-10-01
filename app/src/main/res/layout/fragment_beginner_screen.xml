@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bckgrndbeginner"
+    android:background="#3F48CC"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.BeginnerScreenFragment">
 
@@ -67,25 +67,32 @@
             android:text="Hello, my name is Dennis!"
             android:textColor="#FF7F27"
             android:textSize="16sp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp" />
 
-        <TextView
-            android:layout_width="315dp"
-            android:layout_height="wrap_content"
-            android:text="Zdravo, ja se zovem Denis!"
-            android:textColor="@color/black"
-            android:gravity="center"
-            android:textSize="24sp"
-            android:layout_marginTop="14dp"/>
-
-        <ImageButton
-            android:id="@+id/speakerButton1"
+        <ImageView
+            android:id="@+id/imageViewSpeaker1"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_gravity="end"
-            android:contentDescription="Speaker Button"
-            android:backgroundTint="#00FFFFFF"
-            android:src="@drawable/baseline_speaker" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="-22dp"
+            android:src="@drawable/baseline_speaker"
+            app:layout_constraintStart_toEndOf="@+id/textViewDennis"
+            app:layout_constraintTop_toTopOf="@+id/textViewDennis" />
+
+        <Button
+            android:id="@+id/buttonSpeaker1"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Zdravo, ja se zovem Denis!"
+            android:backgroundTint="#FF7F27"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDennis" />
 
         <TextView
             android:id="@+id/textViewYourName"
@@ -94,25 +101,33 @@
             android:layout_marginStart="-80dp"
             android:text="What's your name?"
             android:textColor="#FF7F27"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSpeaker1"
+            android:layout_marginTop="20dp"/>
 
-        <TextView
-            android:layout_width="315dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Kako se (ti) zoveš?"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:layout_marginTop="8dp"/>
-
-        <ImageButton
-            android:id="@+id/speakerButton2"
+        <ImageView
+            android:id="@+id/imageViewSpeaker2"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_gravity="end"
-            android:backgroundTint="#00FFFFFF"
-            android:contentDescription="Speaker Button"
-            android:src="@drawable/baseline_speaker" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="-23dp"
+            android:src="@drawable/baseline_speaker"
+            app:layout_constraintStart_toEndOf="@+id/textViewYourName"
+            app:layout_constraintTop_toTopOf="@+id/textViewYourName" />
+
+        <Button
+            android:id="@+id/buttonSpeaker2"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Kako se (ti) zoveš?"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:backgroundTint="#FF7F27"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewYourName"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </LinearLayout>
 
@@ -120,7 +135,7 @@
         android:id="@+id/textViewMoreInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="112dp"
         android:text="Want to know more about presenting yourself?"
         android:textColor="#FF7F27"
         android:textSize="18sp"

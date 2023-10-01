@@ -20,8 +20,8 @@ public class BeginnerScreenFragment extends Fragment {
     private NavController navController;
     private Button continueButton;
     private MediaPlayer mediaPlayer;
-    private ImageButton speakerButton1;
-    private ImageButton speakerButton2;
+    private Button buttonSpeaker1;
+    private Button buttonSpeaker2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,17 +41,17 @@ public class BeginnerScreenFragment extends Fragment {
         mediaPlayer = MediaPlayer.create(requireContext(), R.raw.dennissound);
 
         // Initialize ImageButtons by their IDs
-        speakerButton1 = rootView.findViewById(R.id.speakerButton1);
-        speakerButton2 = rootView.findViewById(R.id.speakerButton2);
+        buttonSpeaker1 = rootView.findViewById(R.id.buttonSpeaker1);
+        buttonSpeaker2 = rootView.findViewById(R.id.buttonSpeaker2);
 
-        speakerButton1.setOnClickListener(new View.OnClickListener() {
+        buttonSpeaker1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 playSound(R.raw.dennissound);
             }
         });
 
-        speakerButton2.setOnClickListener(new View.OnClickListener() {
+        buttonSpeaker2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 playSound(R.raw.kakosezovessound);
