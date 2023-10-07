@@ -153,4 +153,9 @@
             android:id="@+id/action_settingsFragment_to_splashFragment"
             app:destination="@id/splashFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/transportFragment"
+        android:name="com.example.learningbcms.views.TransportFragment"
+        android:label="fragment_transport"
+        tools:layout="@layout/fragment_transport" />
 </navigation>
