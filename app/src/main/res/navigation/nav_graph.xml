@@ -143,6 +143,9 @@
         <action
             android:id="@+id/action_beginnerScreen_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_beginnerScreen_to_transportFragment"
+            app:destination="@id/transportFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -157,5 +160,9 @@
         android:id="@+id/transportFragment"
         android:name="com.example.learningbcms.views.TransportFragment"
         android:label="fragment_transport"
-        tools:layout="@layout/fragment_transport" />
+        tools:layout="@layout/fragment_transport" >
+        <action
+            android:id="@+id/action_transportFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
 </navigation>

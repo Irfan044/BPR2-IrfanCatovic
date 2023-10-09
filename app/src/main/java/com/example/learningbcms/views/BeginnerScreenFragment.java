@@ -11,14 +11,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.example.learningbcms.R;
 
 public class BeginnerScreenFragment extends Fragment {
 
     private NavController navController;
-    private Button continueButton;
+    private Button quizButton;
+    private Button newLessonButton;
     private MediaPlayer mediaPlayer;
     private Button buttonSpeaker1;
     private Button buttonSpeaker2;
@@ -30,11 +30,19 @@ public class BeginnerScreenFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_beginner_screen, container, false);
         navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
 
-        continueButton = rootView.findViewById(R.id.buttonContinue);
-        continueButton.setOnClickListener(new View.OnClickListener() {
+        quizButton = rootView.findViewById(R.id.buttonQuiz);
+        quizButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.action_beginnerScreen_to_listFragment); //might be changed, linking somewhere else
+                navController.navigate(R.id.action_beginnerScreen_to_listFragment);
+            }
+        });
+
+        newLessonButton = rootView.findViewById(R.id.buttonNewLesson);
+        newLessonButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_beginnerScreen_to_transportFragment);
             }
         });
 

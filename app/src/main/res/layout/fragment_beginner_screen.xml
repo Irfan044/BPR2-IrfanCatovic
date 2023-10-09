@@ -158,16 +158,30 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewMoreInfo" />
 
     <Button
-        android:id="@+id/buttonContinue"
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonQuiz"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="Continue"
+        android:text="GO TO QUIZ"
+        android:textColor="#3F48CC"
+        android:backgroundTint="#FF7F27"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNewLesson"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonWatchVideo"
+        app:layout_constraintVertical_bias="0.644" />
+
+    <Button
+        android:id="@+id/buttonNewLesson"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="GO TO NEW LESSON"
         android:textColor="#3F48CC"
         android:backgroundTint="#FF7F27"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/buttonQuiz"
         app:layout_constraintTop_toBottomOf="@+id/buttonWatchVideo"
         app:layout_constraintVertical_bias="0.644" />
 
