@@ -65,6 +65,7 @@
                 android:layout_marginTop="16dp">
 
                 <LinearLayout
+                    android:id="@+id/pedestrianLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -76,8 +77,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/pedestrian"
-                        android:contentDescription="Thing 1 Image"
-                        android:onClick="playSound"/>
+                        android:contentDescription="Thing 1 Image" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -89,6 +89,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/zebracrossingLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -119,6 +120,7 @@
                 android:layout_marginTop="16dp">
 
                 <LinearLayout
+                    android:id="@+id/bicycleLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -130,8 +132,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/bicycle"
-                        android:contentDescription="Thing 1 Image"
-                        android:onClick="playSound"/>
+                        android:contentDescription="Thing 1 Image" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -143,6 +144,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/scooterLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -166,6 +168,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/motorcycleLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -196,6 +199,7 @@
                 android:layout_marginTop="16dp">
 
                 <LinearLayout
+                    android:id="@+id/carLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -207,8 +211,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/car"
-                        android:contentDescription="Thing 1 Image"
-                        android:onClick="playSound"/>
+                        android:contentDescription="Thing 1 Image" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -220,6 +223,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/truckLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -243,6 +247,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/drivinglicenseLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -266,6 +271,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/busLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -289,6 +295,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/busstationLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -312,6 +319,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/motorwayLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -342,6 +350,7 @@
                 android:layout_marginTop="16dp">
 
                 <LinearLayout
+                    android:id="@+id/trainLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -353,8 +362,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/train"
-                        android:contentDescription="Thing 1 Image"
-                        android:onClick="playSound"/>
+                        android:contentDescription="Thing 1 Image" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -366,6 +374,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/trainstationLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -389,6 +398,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/tramwayLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -419,6 +429,7 @@
                 android:layout_marginTop="16dp">
 
                 <LinearLayout
+                    android:id="@+id/airplaneLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -430,8 +441,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/airplane"
-                        android:contentDescription="Thing 1 Image"
-                        android:onClick="playSound"/>
+                        android:contentDescription="Thing 1 Image" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -443,6 +453,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/airportLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
