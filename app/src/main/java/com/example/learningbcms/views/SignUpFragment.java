@@ -28,7 +28,7 @@ public class SignUpFragment extends Fragment {
     private AuthViewModel viewModel;
     private NavController navController;
     private EditText editEmail, editPass;
-    private Button signInBtn;
+    private Button signInButton;
     private Button signUpBtn;
 
     @Override
@@ -45,10 +45,10 @@ public class SignUpFragment extends Fragment {
         navController = Navigation.findNavController(view);
         editEmail = view.findViewById(R.id.emailEditSignUP);
         editPass = view.findViewById(R.id.passEditSignUp);
-        signInBtn = view.findViewById(R.id.signInBtn);
+        signInButton = view.findViewById(R.id.signInButton);
         signUpBtn = view.findViewById(R.id.signUpBtn);
 
-        signInBtn.setOnClickListener(new View.OnClickListener() {
+        signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_signUpFragment_to_signInFragment);
