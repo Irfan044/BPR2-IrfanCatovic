@@ -1,6 +1,8 @@
 package com.example.learningbcms.views;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -19,6 +21,7 @@ public class BeginnerScreenFragment extends Fragment {
     private NavController navController;
     private Button quizButton;
     private Button newLessonButton;
+    private Button buttonWatchVideo;
     private MediaPlayer mediaPlayer;
     private Button buttonSpeaker1;
     private Button buttonSpeaker2;
@@ -43,6 +46,14 @@ public class BeginnerScreenFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_beginnerScreen_to_transportFragment);
+            }
+        });
+
+        buttonWatchVideo = rootView.findViewById(R.id.buttonWatchVideo);
+        buttonWatchVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openYouTubeVideo();
             }
         });
 
@@ -85,6 +96,20 @@ public class BeginnerScreenFragment extends Fragment {
         mediaPlayer = MediaPlayer.create(requireContext(), soundResource);
         if (mediaPlayer != null) {
             mediaPlayer.start();
+        }
+    }
+
+    private void openYouTubeVideo() {
+        String videoUrl = "https://www.youtube.com/watch?v=y99P56AZvLo&ab_channel=Slavyansk";
+
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(videoUrl));
+        intent.setPackage("com.google.android.youtube");
+
+        if (intent.resolveActivity(requireContext().getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            intent.setPackage(null);
+            startActivity(intent);
         }
     }
 }
