@@ -131,6 +131,9 @@
         <action
             android:id="@+id/action_previousKnowledgeFragment_to_settingsFragment2"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_previousKnowledgeFragment_to_transportFragment"
+            app:destination="@id/transportFragment" />
     </fragment>
     <fragment
         android:id="@+id/beginnerScreen"

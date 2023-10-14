@@ -33,7 +33,7 @@ public class PreviousKnowledgeFragment extends Fragment {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Navigation.findNavController(view).navigate(R.id.action_previousKnowledgeFragment_to_otherFragment);
+                Navigation.findNavController(view).navigate(R.id.action_previousKnowledgeFragment_to_transportFragment);
             }
         });
 
