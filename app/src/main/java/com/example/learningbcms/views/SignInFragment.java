@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.example.learningbcms.R;
 import com.example.learningbcms.viewmodel.AuthViewModel;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.AdditionalUserInfo;
 
 
 public class SignInFragment extends Fragment {
@@ -61,13 +62,14 @@ public class SignInFragment extends Fragment {
             public void onClick(View v) {
                 String email = editEmail.getText().toString();
                 String pass = editPass.getText().toString();
-                if (!email.isEmpty() && !pass.isEmpty()){
-                    viewModel.signIn(email , pass);
+                if (!email.isEmpty() && !pass.isEmpty()) {
+                    viewModel.signIn(email, pass);
                     Toast.makeText(getContext(), "Login Successfully", Toast.LENGTH_SHORT).show();
                     viewModel.getFirebaseUserMutableLiveData().observe(getViewLifecycleOwner(), new Observer<FirebaseUser>() {
                         @Override
                         public void onChanged(FirebaseUser firebaseUser) {
-                            boolean isNewUser = firebaseUser.getMetadata() != null && firebaseUser.getMetadata().getCreationTimestamp() == firebaseUser.getMetadata().getLastSignInTimestamp();
+                            boolean isNewUser = (firebaseUser.getMetadata() != null
+                                    && firebaseUser.getMetadata().getCreationTimestamp() == firebaseUser.getMetadata().getLastSignInTimestamp());
                             if (isNewUser) {
                                 navController.navigate(R.id.action_signInFragment_to_previousKnowledgeFragment);
                             } else {
@@ -76,7 +78,7 @@ public class SignInFragment extends Fragment {
                             }
                         }
                     });
-                }else{
+                } else {
                     Toast.makeText(getContext(), "Please Enter Email and Pass", Toast.LENGTH_SHORT).show();
                 }
             }
