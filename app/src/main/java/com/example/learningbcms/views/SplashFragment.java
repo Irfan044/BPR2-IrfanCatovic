@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
@@ -54,7 +53,7 @@ public class SplashFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (viewModel.getCurrentUser() != null) {
-                    navController.navigate(R.id.action_splashFragment_to_beginnerScreen); //change back to listFragment
+                    navController.navigate(R.id.action_splashFragment_to_beginnerScreen);
                 } else {
                     navController.navigate(R.id.action_splashFragment_to_signInFragment);
                 }
@@ -63,21 +62,16 @@ public class SplashFragment extends Fragment {
             }
         });
 
-        if (!isStartButtonClicked()) {
+        if (isStartButtonClicked()) {
             navController.navigate(R.id.action_splashFragment_to_listFragment);
         }
+    }
 
-        // Add a click listener for the Sign Out button
-        /*view.findViewById(R.id.signOutButton).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signOut(); // Call the signOut method to implement Sign Out functionality
-            }
-        });
+    @Override
+    public void onStop() {
+        super.onStop();
 
-        if (!isStartButtonClicked()) {
-            navController.navigate(R.id.action_splashFragment_to_listFragment);
-        }*/
+        saveStartButtonClickedStatus(false);
     }
 
     private void saveStartButtonClickedStatus(boolean isClicked) {
@@ -90,16 +84,4 @@ public class SplashFragment extends Fragment {
         SharedPreferences sharedPreferences = requireActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getBoolean(BUTTON_CLICKED_KEY, false);
     }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-    }
-
-    // For testing purposes only
-    /*private void signOut() {
-        viewModel.signOut();
-        saveStartButtonClickedStatus(false);
-        navController.navigate(R.id.action_splashFragment_to_signInFragment);
-    }*/
 }
