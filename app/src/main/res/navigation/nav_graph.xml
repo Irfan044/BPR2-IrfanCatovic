@@ -149,6 +149,9 @@
         <action
             android:id="@+id/action_beginnerScreen_to_transportFragment"
             app:destination="@id/transportFragment" />
+        <action
+            android:id="@+id/action_beginnerScreen_to_lessonMenuFragment"
+            app:destination="@id/lessonMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -167,5 +170,20 @@
         <action
             android:id="@+id/action_transportFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_transportFragment_to_lessonMenuFragment"
+            app:destination="@id/lessonMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lessonMenuFragment"
+        android:name="com.example.learningbcms.views.LessonMenuFragment"
+        android:label="fragment_lesson_menu"
+        tools:layout="@layout/fragment_lesson_menu" >
+        <action
+            android:id="@+id/action_lessonMenuFragment_to_beginnerScreen"
+            app:destination="@id/beginnerScreen" />
+        <action
+            android:id="@+id/action_lessonMenuFragment_to_transportFragment"
+            app:destination="@id/transportFragment" />
     </fragment>
 </navigation>

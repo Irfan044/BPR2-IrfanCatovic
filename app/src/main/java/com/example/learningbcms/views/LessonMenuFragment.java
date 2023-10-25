@@ -4,11 +4,19 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+
 import com.example.learningbcms.R;
 
 public class LessonMenuFragment extends Fragment {
+
+    private NavController navController;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +26,7 @@ public class LessonMenuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_lesson_menu, container, false);
+        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
 
         CardView cardView1 = view.findViewById(R.id.cardView1);
         CardView cardView2 = view.findViewById(R.id.cardView2);
@@ -29,43 +38,42 @@ public class LessonMenuFragment extends Fragment {
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle the click for the first CardView
-                // You can launch an activity or perform any action here
+                navController.navigate(R.id.action_lessonMenuFragment_to_beginnerScreen);
             }
         });
 
         cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle the click for the second CardView
+                Toast.makeText(getContext(), "NOT IMPLEMENTED", Toast.LENGTH_SHORT).show();
             }
         });
 
         cardView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle the click for the third CardView
+                Toast.makeText(getContext(), "NOT IMPLEMENTED", Toast.LENGTH_SHORT).show();
             }
         });
 
         cardView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle the click for the fourth CardView
+                Toast.makeText(getContext(), "NOT IMPLEMENTED", Toast.LENGTH_SHORT).show();
             }
         });
 
         cardView5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle the click for the fifth CardView
+                Toast.makeText(getContext(), "NOT IMPLEMENTED", Toast.LENGTH_SHORT).show();
             }
         });
 
         cardView6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle the click for the sixth CardView
+                navController.navigate(R.id.action_lessonMenuFragment_to_beginnerScreen);
             }
         });
 
