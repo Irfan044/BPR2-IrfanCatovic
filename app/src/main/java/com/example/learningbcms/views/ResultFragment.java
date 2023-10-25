@@ -41,6 +41,7 @@ public class ResultFragment extends Fragment {
     private ProgressBar scoreProgressbar;
     private String quizId;
     private Button homeBtn;
+    private Button newLessonBtn;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -67,12 +68,19 @@ public class ResultFragment extends Fragment {
         percentTv = view.findViewById(R.id.resultPercentageTv);
         scoreProgressbar = view.findViewById(R.id.resultCoutProgressBar);
         homeBtn = view.findViewById(R.id.home_btn);
-
+        newLessonBtn = view.findViewById(R.id.newLessonBtn);
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_resultFragment_to_listFragment);
+            }
+        });
+
+        newLessonBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_resultFragment_to_lessonMenuFragment);
             }
         });
 

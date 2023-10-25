@@ -119,6 +119,9 @@
         <action
             android:id="@+id/action_resultFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_resultFragment_to_lessonMenuFragment"
+            app:destination="@id/lessonMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/previousKnowledgeFragment"
