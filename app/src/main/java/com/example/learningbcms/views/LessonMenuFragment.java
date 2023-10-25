@@ -73,7 +73,7 @@ public class LessonMenuFragment extends Fragment {
         cardView6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.action_lessonMenuFragment_to_beginnerScreen);
+                navController.navigate(R.id.action_lessonMenuFragment_to_transportFragment);
             }
         });
 
