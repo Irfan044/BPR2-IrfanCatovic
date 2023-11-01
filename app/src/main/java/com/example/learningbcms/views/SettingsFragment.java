@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.example.learningbcms.R;
 import com.example.learningbcms.viewmodel.AuthViewModel;
@@ -26,14 +27,14 @@ public class SettingsFragment extends Fragment {
 
         authViewModel = new ViewModelProvider(this).get(AuthViewModel.class);
 
+        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
+
         Button signOutButton = rootView.findViewById(R.id.signOutButton);
 
         signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("MyApp", "Sign out button clicked");
                 authViewModel.signOut();
-                Log.d("MyApp", "Sign out completed, navigating to splashFragment");
                 navController.navigate(R.id.action_settingsFragment_to_splashFragment);
             }
         });
