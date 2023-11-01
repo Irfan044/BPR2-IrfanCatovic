@@ -102,7 +102,7 @@ public class ResultFragment extends Fragment {
 
                 Long total = correct + wrong + noAnswer;
                 Long percent = (correct * 100) / total;
-                percentTv.setText(String.valueOf(percent));
+                percentTv.setText(String.valueOf(percent) + "%");
                 scoreProgressbar.setProgress(percent.intValue());
 
                 if (percent >= 0 && percent <= 33) {
