@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_splashFragment_to_beginnerScreen"
             app:destination="@id/beginnerScreen" />
+        <action
+            android:id="@+id/action_splashFragment_to_lessonMenuFragment"
+            app:destination="@id/lessonMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -52,6 +55,9 @@
         <action
             android:id="@+id/action_signInFragment_to_beginnerScreen"
             app:destination="@id/beginnerScreen" />
+        <action
+            android:id="@+id/action_signInFragment_to_lessonMenuFragment2"
+            app:destination="@id/lessonMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/listFragment"

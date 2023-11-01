@@ -53,7 +53,7 @@ public class SplashFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (viewModel.getCurrentUser() != null) {
-                    navController.navigate(R.id.action_splashFragment_to_beginnerScreen);
+                    navController.navigate(R.id.action_splashFragment_to_lessonMenuFragment);
                 } else {
                     navController.navigate(R.id.action_splashFragment_to_signInFragment);
                 }

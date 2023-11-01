@@ -74,7 +74,7 @@ public class SignInFragment extends Fragment {
                                 navController.navigate(R.id.action_signInFragment_to_previousKnowledgeFragment);
                             } else {
                                 //navController.navigate(R.id.action_signInFragment_to_listFragment);
-                                navController.navigate(R.id.action_signInFragment_to_beginnerScreen); //change to the one above, and delete nav
+                                navController.navigate(R.id.action_signInFragment_to_lessonMenuFragment2); //change to the one above, and delete nav
                             }
                         }
                     });
