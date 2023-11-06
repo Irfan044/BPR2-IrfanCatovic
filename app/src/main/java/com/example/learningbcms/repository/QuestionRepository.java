@@ -79,7 +79,7 @@ public class QuestionRepository {
                     @Override
                     public void onComplete(@NonNull  Task<QuerySnapshot> task) {
                         if (task.isSuccessful()){
-                            onQuestionLoad.onLoad(task.getResult().toObjects(QuestionModel.class));
+                            onQuestionLoad.onLoad(task.getResult().toObjects(QuestionModel.class)); //list of QuestionModel objects
                         }else{
                             onQuestionLoad.onError(task.getException());
                         }

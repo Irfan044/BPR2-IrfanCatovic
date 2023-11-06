@@ -54,6 +54,7 @@ public class TransportFragment extends Fragment {
         setLinearLayoutClickListener(rootView, R.id.truckLayout, R.raw.truck_sound);
         setLinearLayoutClickListener(rootView, R.id.busLayout, R.raw.bus_sound);
         setLinearLayoutClickListener(rootView, R.id.busstationLayout, R.raw.busstation_sound);
+        setLinearLayoutClickListener(rootView, R.id.motorwayLayout, R.raw.motorway_sound);
         setLinearLayoutClickListener(rootView, R.id.trainLayout, R.raw.train_sound);
         setLinearLayoutClickListener(rootView, R.id.trainstationLayout, R.raw.trainstation_sound);
         setLinearLayoutClickListener(rootView, R.id.tramwayLayout, R.raw.tramway_sound);
