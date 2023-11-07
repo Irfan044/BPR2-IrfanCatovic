@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="#3F48CC"
     android:orientation="vertical"
+    android:screenOrientation="portrait"
     tools:context=".views.SettingsFragment">
 
     <Button

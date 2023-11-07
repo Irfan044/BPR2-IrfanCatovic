@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:background="#3F48CC"
     android:padding="16dp"
+    android:screenOrientation="portrait"
     tools:context=".views.PreviousKnowledgeFragment">
 
     <TextView
