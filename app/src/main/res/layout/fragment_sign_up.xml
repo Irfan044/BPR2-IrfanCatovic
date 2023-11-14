@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:screenOrientation="portrait"
-    android:background="@drawable/loginscreen"
+    android:background="@drawable/signupscreen"
     tools:context=".views.SignUpFragment">
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="SIGN UP"
-        android:textColor="#FF7F27"
+        android:textColor="#3F48CC"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/edit_bg"
+            android:background="@drawable/edit_bg2"
             android:ems="10"
             android:hint="Enter Your Email"
             android:inputType="textEmailAddress"
@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/edit_bg"
+            android:background="@drawable/edit_bg2"
             android:ems="10"
             android:hint="Enter Your Password"
             android:inputType="textPassword"
@@ -65,9 +65,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#FF7F27"
+            android:backgroundTint="#3F48CC"
             android:text="Sign Up"
-            android:textColor="#3F48CC" />
+            android:textColor="#FF7F27" />
     </LinearLayout>
 
     <Button
@@ -77,8 +77,8 @@
         android:layout_marginStart="64dp"
         android:layout_marginBottom="80dp"
         android:text="Sign In"
-        android:textColor="#3F48CC"
-        android:backgroundTint="#FF7F27"
+        android:textColor="#FF7F27"
+        android:backgroundTint="#3F48CC"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

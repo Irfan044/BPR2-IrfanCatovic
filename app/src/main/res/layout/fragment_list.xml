@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="#3F48CC"
     android:screenOrientation="portrait"
     tools:context=".views.ListFragment">
 
@@ -16,7 +16,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:text="Quiz"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="#FF7F27"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
