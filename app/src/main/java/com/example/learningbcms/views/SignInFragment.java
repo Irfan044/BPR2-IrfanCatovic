@@ -29,13 +29,11 @@ public class SignInFragment extends Fragment {
     private AuthViewModel viewModel;
     private NavController navController;
     private EditText editEmail , editPass;
-    //private TextView signUpText;
     private Button signUpBtn;
     private Button signInBtn;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_sign_in, container, false);
     }
 
@@ -46,7 +44,6 @@ public class SignInFragment extends Fragment {
         navController = Navigation.findNavController(view);
         editEmail = view.findViewById(R.id.emailEditSignIN);
         editPass = view.findViewById(R.id.passEditSignIn);
-        //signUpText = view.findViewById(R.id.signUpText);
         signUpBtn = view.findViewById(R.id.signUpButton);
         signInBtn = view.findViewById(R.id.signInBtn);
 
@@ -73,8 +70,7 @@ public class SignInFragment extends Fragment {
                             if (isNewUser) {
                                 navController.navigate(R.id.action_signInFragment_to_previousKnowledgeFragment);
                             } else {
-                                //navController.navigate(R.id.action_signInFragment_to_listFragment);
-                                navController.navigate(R.id.action_signInFragment_to_lessonMenuFragment2); //change to the one above, and delete nav
+                                navController.navigate(R.id.action_signInFragment_to_lessonMenuFragment2);
                             }
                         }
                     });

@@ -64,21 +64,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--<Button
-        android:id="@+id/signOutButton"
-        android:layout_width="180dp"
-        android:layout_height="60dp"
-        android:backgroundTint="#FF7F27"
-        android:text="SIGN OUT"
-        android:textColor="#3F48CC"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/startButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.1" />-->
-<!--    This functionality is for testing purposes only-->
-
 </androidx.constraintlayout.widget.ConstraintLayout>
