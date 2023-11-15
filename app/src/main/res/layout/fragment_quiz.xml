@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#3F48CC"
     android:screenOrientation="portrait"
-    tools:context=".views.Quizragment">
+    tools:context=".views.QuizFragment">
 
 
     <ImageView

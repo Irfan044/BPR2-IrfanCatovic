@@ -23,13 +23,12 @@ import android.widget.TextView;
 import com.example.learningbcms.Model.QuestionModel;
 import com.example.learningbcms.R;
 import com.example.learningbcms.viewmodel.QuestionViewModel;
-import com.example.learningbcms.viewmodel.QuizListViewModel;
 
 import java.util.HashMap;
 import java.util.List;
 
 
-public class Quizragment extends Fragment implements View.OnClickListener {
+public class QuizFragment extends Fragment implements View.OnClickListener {
 
     private QuestionViewModel viewModel;
     private NavController navController;
@@ -81,8 +80,8 @@ public class Quizragment extends Fragment implements View.OnClickListener {
         questionNumberTv = view.findViewById(R.id.quizQuestionsCount);
         progressBar = view.findViewById(R.id.quizCoutProgressBar);
 
-        quizId = QuizragmentArgs.fromBundle(getArguments()).getQuizId();
-        totalQuestions = QuizragmentArgs.fromBundle(getArguments()).getTotalQueCount();
+        quizId = QuizFragmentArgs.fromBundle(getArguments()).getQuizId();
+        totalQuestions = QuizFragmentArgs.fromBundle(getArguments()).getTotalQueCount();
         viewModel.setQuizId(quizId);
         viewModel.getQuestions();;
 
@@ -220,8 +219,8 @@ public class Quizragment extends Fragment implements View.OnClickListener {
 
         viewModel.addResults(resultMap);
 
-        QuizragmentDirections.ActionQuizragmentToResultFragment action =
-                QuizragmentDirections.actionQuizragmentToResultFragment();
+        QuizFragmentDirections.ActionQuizragmentToResultFragment action =
+                QuizFragmentDirections.actionQuizragmentToResultFragment();
         action.setQuizId(quizId);
         navController.navigate(action);
 

@@ -89,7 +89,7 @@
     </fragment>
     <fragment
         android:id="@+id/quizragment"
-        android:name="com.example.learningbcms.views.Quizragment"
+        android:name="com.example.learningbcms.views.QuizFragment"
         android:label="fragment_quizragment"
         tools:layout="@layout/fragment_quiz" >
         <action
