@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.learningbcms.Model.QuestionModel;
-//import com.example.learningbcms.Model.ResultModel;
 import com.example.learningbcms.repository.QuestionRepository;
 
 import java.util.ArrayList;

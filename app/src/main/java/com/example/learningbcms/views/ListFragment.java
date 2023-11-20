@@ -20,7 +20,6 @@ import android.widget.ProgressBar;
 import com.example.learningbcms.Adapter.QuizListAdapter;
 import com.example.learningbcms.Model.QuizListModel;
 import com.example.learningbcms.R;
-import com.example.learningbcms.viewmodel.AuthViewModel;
 import com.example.learningbcms.viewmodel.QuizListViewModel;
 
 import java.util.List;

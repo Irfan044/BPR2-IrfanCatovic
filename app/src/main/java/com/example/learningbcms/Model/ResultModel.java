@@ -1,7 +1,5 @@
 package com.example.learningbcms.Model;
 
-import com.example.learningbcms.views.ResultFragment;
-
 public class ResultModel {
 
     private int correct ,wrong, notAnswered;

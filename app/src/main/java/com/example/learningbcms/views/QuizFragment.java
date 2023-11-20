@@ -42,7 +42,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     private boolean canAnswer = false;
     private long timer;
     private CountDownTimer countDownTimer;
-    private int notAnswerd = 0;
+    private int notAnswered = 0;
     private int correctAnswer = 0;
     private int wrongAnswer = 0;
     private String answer = "";
@@ -160,7 +160,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             public void onFinish() {
                 canAnswer = false;
                 ansFeedBackTv.setText("Times Up !! No answer selected");
-                notAnswerd ++;
+                notAnswered++;
                 showNextBtn();
             }
         }.start();
@@ -215,7 +215,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         HashMap<String , Object> resultMap = new HashMap<>();
         resultMap.put("correct" , correctAnswer);
         resultMap.put("wrong" , wrongAnswer);
-        resultMap.put("notAnswered" , notAnswerd);
+        resultMap.put("notAnswered" , notAnswered);
 
         viewModel.addResults(resultMap);
 
